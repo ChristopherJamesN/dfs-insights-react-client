@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Slates from './Slates.js';
-//https://dfs-insights.herokuapp.com/slates.json
+import Slates from './Components/Slates.js';
 
 class App extends Component {
     render() {
