@@ -10,7 +10,7 @@ class Slates extends Component {
   }
 
   componentDidMount() {
-      fetch('https://dfs-insights.herokuapp.com/slates.json', {
+      fetch('slates.json', {
           mode: "no-cors", // no-cors, cors, *same-origin
       })
         .then(response => {
