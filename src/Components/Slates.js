@@ -10,10 +10,9 @@ class Slates extends Component {
   }
 
   componentDidMount() {
-      fetch('slates.json', {
-          mode: "no-cors", // no-cors, cors, *same-origin
-      })
+      fetch('/slates.json')
         .then(response => {
+          console.log(response);
           return response.json();
         }).then(data => {
           let slates = data.response.map((hit) => {

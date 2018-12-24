@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import Slates from './Components/Slates.js';
+import IntroText from './Components/IntroText';
 
 class App extends Component {
     render() {
       return ( 
-        <div> All Slates <Slates/></div>
+        <div><IntroText /> All Slates <Slates/></div>
       );
     }
 }

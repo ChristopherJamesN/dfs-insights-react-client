@@ -2,11 +2,12 @@
   "name": "dfs-insights-react-client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https: //dfs-insights.herokuapp.com/",
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "react-strap": "0.0.1",
+    "reactstrap": "^6.5.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,5 +23,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "proxy": "https://dfs-insights.herokuapp.com/"
 }
