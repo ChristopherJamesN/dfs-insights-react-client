@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component }  from 'react';
 import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 
-const IntroText = () => {
+class IntroText extends Component {
+  render(){
     return(
       <div>
         <Breadcrumb>
@@ -11,7 +12,8 @@ const IntroText = () => {
           <BreadcrumbItem><p>This app does DFS analysis kind of.</p></BreadcrumbItem>
         </Breadcrumb>
       </div>
-    )
-};
+    );
+  }
+}
 
 export default IntroText;
