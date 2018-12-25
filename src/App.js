@@ -6,7 +6,7 @@ import IntroText from './Components/IntroText';
 class App extends Component {
     render() {
       return ( 
-        <div><IntroText /> All Slates <Slates/></div>
+        <div class="container"><IntroText /> All Slates <Slates/></div>
       );
     }
 }
