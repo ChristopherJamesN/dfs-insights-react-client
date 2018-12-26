@@ -24,6 +24,9 @@ class Slates extends Component {
             <tr key={hit.id}>
               <td>Name: {hit.name}</td>
               <td>Max Entered Count: {hit.max_entered_count} </td>
+              <td>Winner: {hit.entries[1].name}</td>
+              <td>Points: {hit.entries[1].points}</td>
+              <td>Date: {hit.date}</td>
             </tr>
           );
         });
