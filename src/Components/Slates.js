@@ -21,9 +21,10 @@ class Slates extends Component {
         console.log(data);
         let slates = data.map(hit => {
           return (
-            <div key={hit.id}>
-              Name: {hit.name} Max Entered Count: {hit.max_entered_count}{' '}
-            </div>
+            <tr key={hit.id}>
+              <td>Name: {hit.name}</td>
+              <td>Max Entered Count: {hit.max_entered_count} </td>
+            </tr>
           );
         });
         this.setState({ data: slates });
@@ -32,7 +33,13 @@ class Slates extends Component {
   }
 
   render() {
-    return <div>{this.state.data}</div>;
+    return (
+      <div>
+        <table className="table">
+          <tbody>{this.state.data}</tbody>
+        </table>
+      </div>
+    );
   }
 }
 
