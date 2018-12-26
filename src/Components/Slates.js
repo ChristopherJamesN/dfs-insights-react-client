@@ -10,13 +10,16 @@ class Slates extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/slates.json')
+    fetch('http://localhost:3000/slates.json', {
+      'Content-Type': 'application/json'
+    })
       .then(response => {
         console.log(response);
         return response.json();
       })
       .then(data => {
-        let slates = data.response.map(hit => {
+        console.log(data);
+        let slates = data.map(hit => {
           return <div key={hit.id}> {hit.name} </div>;
         });
         this.setState({ data: slates });
