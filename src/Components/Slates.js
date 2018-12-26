@@ -10,7 +10,7 @@ class Slates extends Component {
   }
 
   componentDidMount() {
-    fetch('/slates.json')
+    fetch('http://localhost:3000/slates.json')
       .then(response => {
         console.log(response);
         return response.json();
