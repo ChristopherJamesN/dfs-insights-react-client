@@ -20,7 +20,11 @@ class Slates extends Component {
       .then(data => {
         console.log(data);
         let slates = data.map(hit => {
-          return <div key={hit.id}> {hit.name} </div>;
+          return (
+            <div key={hit.id}>
+              Name: {hit.name} Max Entered Count: {hit.max_entered_count}{' '}
+            </div>
+          );
         });
         this.setState({ data: slates });
       })
