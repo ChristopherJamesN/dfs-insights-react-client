@@ -1,15 +1,19 @@
-import React, { Component }  from 'react';
+import React, { Component } from 'react';
 import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 
 class IntroText extends Component {
-  render(){
-    return(
+  render() {
+    return (
       <div>
         <Breadcrumb>
-          <BreadcrumbItem><h2>Welcome to DFSInsights</h2></BreadcrumbItem>
+          <BreadcrumbItem>
+            <h2>Welcome to DFSInsights</h2>
+          </BreadcrumbItem>
         </Breadcrumb>
         <Breadcrumb>
-          <BreadcrumbItem><p>This app does DFS analysis kind of.</p></BreadcrumbItem>
+          <BreadcrumbItem>
+            <p>This app does DFS analysis kind of.</p>
+          </BreadcrumbItem>
         </Breadcrumb>
       </div>
     );
