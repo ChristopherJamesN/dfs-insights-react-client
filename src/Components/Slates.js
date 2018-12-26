@@ -22,11 +22,11 @@ class Slates extends Component {
         let slates = data.map(hit => {
           return (
             <tr key={hit.id}>
-              <td>Name: {hit.name}</td>
-              <td>Max Entered Count: {hit.max_entered_count} </td>
-              <td>Winner: {hit.entries[1].name}</td>
-              <td>Points: {hit.entries[1].points}</td>
-              <td>Date: {hit.date}</td>
+              <td>{hit.name}</td>
+              <td>{hit.max_entered_count} </td>
+              <td>{hit.entries[1].name}</td>
+              <td>{hit.entries[1].points}</td>
+              <td>{hit.date}</td>
             </tr>
           );
         });
@@ -39,6 +39,15 @@ class Slates extends Component {
     return (
       <div>
         <table className="table">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Max Entered Count</th>
+              <th scope="col">Winner</th>
+              <th scope="col">Points</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
           <tbody>{this.state.data}</tbody>
         </table>
       </div>
