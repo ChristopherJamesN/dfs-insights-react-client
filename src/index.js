@@ -5,11 +5,24 @@ import App from './App';
 import Players from './Components/Players';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+
+const Navbar = () => (
+  <div className="container">
+    <NavLink to="/" exact>
+      Home
+    </NavLink>
+
+    <NavLink to="/players" exact>
+      Players
+    </NavLink>
+  </div>
+);
 
 ReactDOM.render(
   <Router>
     <React.Fragment>
+      <Navbar />
       <Route exact path="/" component={App} />
       <Route exact path="/players" component={Players} />
     </React.Fragment>
