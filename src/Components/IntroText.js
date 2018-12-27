@@ -15,6 +15,11 @@ class IntroText extends Component {
             <p>This app does DFS analysis kind of.</p>
           </BreadcrumbItem>
         </Breadcrumb>
+        <Breadcrumb>
+          <BreadcrumbItem>
+            <p>All Slates</p>
+          </BreadcrumbItem>
+        </Breadcrumb>
       </div>
     );
   }
