@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Slate from './Slate';
 
 class Slates extends Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class Slates extends Component {
               <td>{hit.entries[1].name}</td>
               <td>{hit.entries[1].points}</td>
               <td>{hit.date}</td>
+              <Slate name={hit.name} />
             </tr>
           );
         });
