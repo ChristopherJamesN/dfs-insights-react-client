@@ -38,12 +38,20 @@ class Slates extends Component {
             <tr key={hit.id}>
               <td>{hit.name}</td>
               <td>{hit.max_entered_count} </td>
-              <td>{hit.entries[1].name}</td>
-              <td>{hit.entries[1].points}</td>
               <td>{hit.date}</td>
               <td>
                 <Link key={hit.id} to={`/slates/${hit.id}`}>
-                  {hit.name}
+                  Slate Details
+                </Link>
+              </td>
+              <td>
+                <Link key={hit.id + 100000} to={`/slates/${hit.id}/players`}>
+                  Players
+                </Link>
+              </td>
+              <td>
+                <Link key={hit.id + 200000} to={`/slates/${hit.id}/entries`}>
+                  Entries
                 </Link>
               </td>
             </tr>
@@ -62,10 +70,10 @@ class Slates extends Component {
             <tr>
               <th scope="col">Name</th>
               <th scope="col">Max Entered Count</th>
-              <th scope="col">Winner</th>
-              <th scope="col">Points</th>
               <th scope="col">Date</th>
-              <th scope="col">Link</th>
+              <th scope="col">Slate Details</th>
+              <th scope="col">Player Details</th>
+              <th scope="col">Entries Details</th>
             </tr>
           </thead>
           <tbody>{this.state.data}</tbody>

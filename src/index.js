@@ -25,16 +25,6 @@ const Navbar = () => (
               Slates
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/players" exact>
-              Players
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/entries" exact>
-              Entries
-            </NavLink>
-          </li>
         </ul>
       </div>
     </div>
@@ -47,9 +37,9 @@ ReactDOM.render(
       <Navbar />
       <Route exact path="/" component={App} />
       <Route exact path="/slates" component={Slates} />
-      <Route exact path="/players" component={Players} />
-      <Route exact path="/entries" component={Entries} />
       <Route path="/slates/:id" component={Slate} />
+      <Route path="/slates/:id/players" component={Players} />
+      <Route path="/slates/:id/entries" component={Entries} />
     </React.Fragment>
   </Router>,
   document.getElementById('root')
