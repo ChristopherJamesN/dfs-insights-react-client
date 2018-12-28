@@ -5,6 +5,7 @@ import App from './App';
 import Players from './Components/Players';
 import Entries from './Components/Entries';
 import Slates from './Components/Slates';
+import Slate from './Components/Slate';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
@@ -48,6 +49,7 @@ ReactDOM.render(
       <Route exact path="/slates" component={Slates} />
       <Route exact path="/players" component={Players} />
       <Route exact path="/entries" component={Entries} />
+      <Route path="/slates/:id" component={Slate} />
     </React.Fragment>
   </Router>,
   document.getElementById('root')

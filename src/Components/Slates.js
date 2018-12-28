@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Slates extends Component {
   constructor(props) {
@@ -40,6 +41,11 @@ class Slates extends Component {
               <td>{hit.entries[1].name}</td>
               <td>{hit.entries[1].points}</td>
               <td>{hit.date}</td>
+              <td>
+                <Link key={hit.id} to={`/slates/${hit.id}`}>
+                  {hit.name}
+                </Link>
+              </td>
             </tr>
           );
         });
@@ -59,6 +65,7 @@ class Slates extends Component {
               <th scope="col">Winner</th>
               <th scope="col">Points</th>
               <th scope="col">Date</th>
+              <th scope="col">Link</th>
             </tr>
           </thead>
           <tbody>{this.state.data}</tbody>
