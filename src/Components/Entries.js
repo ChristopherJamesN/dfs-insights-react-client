@@ -10,9 +10,14 @@ class Entries extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/slates/980191197/entries.json', {
-      'Content-Type': 'application/json'
-    })
+    fetch(
+      'http://localhost:3000/slates/' +
+        this.props.match.params.id +
+        '/entries.json',
+      {
+        'Content-Type': 'application/json'
+      }
+    )
       .then(response => {
         console.log(response);
         return response.json();
