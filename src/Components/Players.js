@@ -25,7 +25,7 @@ class Players extends Component {
               <td>{hit.name}</td>
               <td>{hit.points}</td>
               <td>{hit.ownership}</td>
-              <td>{hit.date}</td>
+              <td>{hit.position}</td>
             </tr>
           );
         });
@@ -43,7 +43,7 @@ class Players extends Component {
               <th scope="col">Name</th>
               <th scope="col">Points</th>
               <th scope="col">Ownership</th>
-              <th scope="col">Date</th>
+              <th scope="col">Position</th>
             </tr>
           </thead>
           <tbody>{this.state.data}</tbody>

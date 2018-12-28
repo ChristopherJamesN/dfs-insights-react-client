@@ -24,8 +24,8 @@ class Entries extends Component {
             <tr key={hit.id}>
               <td>{hit.name}</td>
               <td>{hit.points}</td>
-              <td>{hit.ownership}</td>
-              <td>{hit.date}</td>
+              <td>{hit.lineup}</td>
+              <td>{hit.updated_at}</td>
             </tr>
           );
         });
@@ -42,7 +42,7 @@ class Entries extends Component {
             <tr>
               <th scope="col">Name</th>
               <th scope="col">Points</th>
-              <th scope="col">Ownership</th>
+              <th scope="col">Lineup</th>
               <th scope="col">Date</th>
             </tr>
           </thead>
