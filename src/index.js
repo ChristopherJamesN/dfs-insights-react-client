@@ -10,20 +10,34 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 
 const Navbar = () => (
-  <div className="container">
-    <NavLink to="/" exact>
-      Home
-    </NavLink>
-    <NavLink to="/slates" exact>
-      Slates
-    </NavLink>
-    <NavLink to="/players" exact>
-      Players
-    </NavLink>
-    <NavLink to="/entries" exact>
-      Entries
-    </NavLink>
-  </div>
+  <nav className="navbar navbar-default horizontal-navbar">
+    <div className="links-navbar-div">
+      <div className="btn-nav">
+        <ul className="nav navbar-nav navbar-right">
+          <li>
+            <NavLink to="/" exact>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/slates" exact>
+              Slates
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/players" exact>
+              Players
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/entries" exact>
+              Entries
+            </NavLink>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 );
 
 ReactDOM.render(
