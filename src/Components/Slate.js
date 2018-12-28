@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import BackButton from './BackButton';
 
 class Slate extends Component {
   constructor(props) {
@@ -30,6 +31,7 @@ class Slate extends Component {
   render() {
     return (
       <div>
+        <BackButton />
         <ul>
           <li>ID: {this.props.match.params.id}</li>
           <li>Max Entered Count: {this.state.data.max_entered_count}</li>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import BackButton from './BackButton';
 
 class Players extends Component {
   constructor(props) {
@@ -42,6 +43,7 @@ class Players extends Component {
   render() {
     return (
       <div className="container">
+        <BackButton />
         <table className="table">
           <thead>
             <tr>
