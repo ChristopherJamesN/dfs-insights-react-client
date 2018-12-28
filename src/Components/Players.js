@@ -36,7 +36,7 @@ class Players extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <table className="table">
           <thead>
             <tr>

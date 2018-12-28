@@ -36,7 +36,7 @@ class Entries extends Component {
 
   render() {
     return (
-      <div className="Container">
+      <div className="container">
         <table className="table">
           <thead>
             <tr>
