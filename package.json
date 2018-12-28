@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^4.2.1",
+    "bootstrap": "3.3.7",
     "cors": "^2.8.5",
     "husky": "^1.2.1",
     "jquery": "^3.3.1",

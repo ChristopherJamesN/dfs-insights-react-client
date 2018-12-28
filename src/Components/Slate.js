@@ -31,10 +31,10 @@ class Slate extends Component {
     return (
       <div>
         <ul>
-          <li>{this.props.match.params.id}</li>
-          <li>{this.state.data.max_entered_count}</li>
-          <li>{this.state.data.sport}</li>
-          <li>{this.state.data.id}</li>
+          <li>ID: {this.props.match.params.id}</li>
+          <li>Max Entered Count: {this.state.data.max_entered_count}</li>
+          <li>Sport: {this.state.data.sport}</li>
+          <li>Total Entries: {this.state.data.totalEntries}</li>
         </ul>
       </div>
     );
