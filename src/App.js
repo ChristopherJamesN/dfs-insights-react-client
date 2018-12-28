@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import IntroText from './Components/IntroText';
+import Slates from './Components/Slates';
 
 class App extends Component {
   render() {
     return (
       <div className="container">
-        <IntroText />
+        <Slates />
       </div>
     );
   }

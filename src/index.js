@@ -8,26 +8,11 @@ import Slates from './Components/Slates';
 import Slate from './Components/Slate';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
-import { Navbar, Nav } from 'reactstrap';
-
-const NavbarConst = () => (
-  <Navbar>
-    <Nav>
-      <NavLink to="/" exact>
-        Home
-      </NavLink>
-      <NavLink to="/slates" exact>
-        Slates
-      </NavLink>
-    </Nav>
-  </Navbar>
-);
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 ReactDOM.render(
   <Router>
     <React.Fragment>
-      <NavbarConst />
       <Route exact path="/" component={App} />
       <Route exact path="/slates" component={Slates} />
       <Route exact path="/slates/:id" component={Slate} />
