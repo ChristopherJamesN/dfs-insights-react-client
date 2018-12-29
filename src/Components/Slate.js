@@ -18,11 +18,9 @@ class Slate extends Component {
       }
     )
       .then(response => {
-        console.log(response);
         return response.json();
       })
       .then(data => {
-        console.log(data);
         this.setState({ data: data });
       })
       .catch(error => console.error('Error:', error));

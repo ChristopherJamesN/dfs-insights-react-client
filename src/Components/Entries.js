@@ -20,11 +20,9 @@ class Entries extends Component {
       }
     )
       .then(response => {
-        console.log(response);
         return response.json();
       })
       .then(data => {
-        console.log(data);
         let slates = data.map(hit => {
           return (
             <tr key={hit.id}>
