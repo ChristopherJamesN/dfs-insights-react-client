@@ -48,6 +48,21 @@ class Slate extends Component {
               <td>Total Entries:</td>
               <td>{this.state.data.totalEntries}</td>
             </tr>
+            <tr>
+              <td>Count 20 Entries:</td>
+              <td>{this.state.data.count_20_entries}</td>
+            </tr>
+            <tr>
+              <td>Count 150 Entries:</td>
+              <td>{this.state.data.count_150_entries}</td>
+            </tr>
+            <tr>
+              <td>Percentage of Entries from Max Entered Contestants:</td>
+              <td>
+                ({this.state.data.count_20_entries} * 20 * 100)/
+                {this.state.data.totalEntries}
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
