@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BackButton from './BackButton';
 import { Link } from 'react-router-dom';
+import { Table } from 'reactstrap';
 
 class Slate extends Component {
   constructor(props) {
@@ -38,38 +39,38 @@ class Slate extends Component {
       <div className="container">
         <BackButton />
         <br />
-        <table>
+        <Table>
           <tbody>
             <tr>
-              <td>ID:</td>
+              <td>ID</td>
               <td>{this.props.match.params.id}</td>
             </tr>
             <tr>
-              <td>Max Entered Count:</td>
+              <td>Max Entered Count</td>
               <td>{this.state.data.max_entered_count}</td>
             </tr>
             <tr>
-              <td>Sport:</td>
+              <td>Sport</td>
               <td>{this.state.data.sport}</td>
             </tr>
             <tr>
-              <td>Total Entries:</td>
+              <td>Total Entries</td>
               <td>{this.state.data.totalEntries}</td>
             </tr>
             <tr>
-              <td>Count 20 Entries:</td>
+              <td>Count 20 Entries</td>
               <td>{this.state.data.count_20_entries}</td>
             </tr>
             <tr>
-              <td>Count 150 Entries:</td>
+              <td>Count 150 Entries</td>
               <td>{this.state.data.count_150_entries}</td>
             </tr>
             <tr>
-              <td>Percentage of Entries from Max Entered Contestants:</td>
+              <td>Percentage of Entries from Max Entered Contestants</td>
               <td>{percentage}</td>
             </tr>
             <tr>
-              <td>Link to Entries:</td>
+              <td>Link to Entries</td>
               <td>
                 <Link
                   key={this.props.match.params.id + 100000}
@@ -80,7 +81,7 @@ class Slate extends Component {
               </td>
             </tr>
             <tr>
-              <td>Link to Players:</td>
+              <td>Link to Players</td>
               <td>
                 <Link
                   key={this.props.match.params.id + 100001}
@@ -91,7 +92,7 @@ class Slate extends Component {
               </td>
             </tr>
           </tbody>
-        </table>
+        </Table>
       </div>
     );
   }
