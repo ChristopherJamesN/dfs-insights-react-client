@@ -41,10 +41,10 @@ class Entries extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div>
         <BackButton />
         <br />
-        <Table>
+        <Table hover>
           <thead>
             <tr>
               <th scope="col">Name</th>

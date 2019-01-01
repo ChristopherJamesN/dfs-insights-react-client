@@ -63,21 +63,19 @@ class Slates extends Component {
 
   render() {
     return (
-      <div className="container">
-        <Table>
-          <thead>
-            <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Max Entered Count</th>
-              <th scope="col">Date</th>
-              <th scope="col">Slate Details</th>
-              <th scope="col">Player Details</th>
-              <th scope="col">Entries Details</th>
-            </tr>
-          </thead>
-          <tbody>{this.state.data}</tbody>
-        </Table>
-      </div>
+      <Table hover>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Max Entered Count</th>
+            <th scope="col">Date</th>
+            <th scope="col">Slate Details</th>
+            <th scope="col">Player Details</th>
+            <th scope="col">Entries Details</th>
+          </tr>
+        </thead>
+        <tbody>{this.state.data}</tbody>
+      </Table>
     );
   }
 }

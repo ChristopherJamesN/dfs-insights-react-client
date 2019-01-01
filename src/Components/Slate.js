@@ -36,10 +36,10 @@ class Slate extends Component {
       ).toPrecision(4)
     );
     return (
-      <div className="container">
+      <div>
         <BackButton />
         <br />
-        <Table>
+        <Table hover>
           <tbody>
             <tr>
               <td>ID</td>

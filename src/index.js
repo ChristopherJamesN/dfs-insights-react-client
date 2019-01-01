@@ -12,14 +12,14 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 ReactDOM.render(
   <Router>
-    <React.Fragment>
+    <div className="container">
       <br />
       <Route exact path="/" component={App} />
       <Route exact path="/slates" component={Slates} />
       <Route exact path="/slates/:id" component={Slate} />
       <Route path="/slates/:id/players" component={Players} />
       <Route path="/slates/:id/entries" component={Entries} />
-    </React.Fragment>
+    </div>
   </Router>,
   document.getElementById('root')
 );
