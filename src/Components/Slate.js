@@ -36,6 +36,7 @@ class Slate extends Component {
     return (
       <div className="container">
         <BackButton />
+        <br />
         <table>
           <tbody>
             <tr>

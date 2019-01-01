@@ -8,7 +8,15 @@ class BackButton extends Component {
 
   render() {
     return (
-      <Button color="primary" onClick={this.context.router.history.goBack}>
+      <Button
+        color="primary"
+        onClick={this.context.router.history.goBack}
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
         Back
       </Button>
     );

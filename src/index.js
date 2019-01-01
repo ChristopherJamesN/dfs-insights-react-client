@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 ReactDOM.render(
   <Router>
     <React.Fragment>
+      <br />
       <Route exact path="/" component={App} />
       <Route exact path="/slates" component={Slates} />
       <Route exact path="/slates/:id" component={Slate} />

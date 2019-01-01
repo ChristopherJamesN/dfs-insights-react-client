@@ -42,6 +42,7 @@ class Entries extends Component {
     return (
       <div className="container">
         <BackButton />
+        <br />
         <table className="table">
           <thead>
             <tr>
