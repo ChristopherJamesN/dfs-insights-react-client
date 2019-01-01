@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BackButton from './BackButton';
+import { Table } from 'reactstrap';
 
 class Players extends Component {
   constructor(props) {
@@ -43,7 +44,7 @@ class Players extends Component {
       <div className="container">
         <BackButton />
         <br />
-        <table className="table">
+        <Table>
           <thead>
             <tr>
               <th scope="col">Name</th>
@@ -53,7 +54,7 @@ class Players extends Component {
             </tr>
           </thead>
           <tbody>{this.state.data}</tbody>
-        </table>
+        </Table>
       </div>
     );
   }

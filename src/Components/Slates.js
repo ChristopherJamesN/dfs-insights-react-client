@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Table } from 'reactstrap';
 
 class Slates extends Component {
   constructor(props) {
@@ -63,7 +64,7 @@ class Slates extends Component {
   render() {
     return (
       <div className="container">
-        <table className="table">
+        <Table>
           <thead>
             <tr>
               <th scope="col">Name</th>
@@ -75,7 +76,7 @@ class Slates extends Component {
             </tr>
           </thead>
           <tbody>{this.state.data}</tbody>
-        </table>
+        </Table>
       </div>
     );
   }
