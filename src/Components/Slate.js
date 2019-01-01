@@ -27,6 +27,12 @@ class Slate extends Component {
   }
 
   render() {
+    let percentage = String(
+      (
+        (this.state.data.count_20_entries * 20 * 100) /
+        this.state.data.totalEntries
+      ).toPrecision(4)
+    );
     return (
       <div className="container">
         <BackButton />
@@ -58,10 +64,7 @@ class Slate extends Component {
             </tr>
             <tr>
               <td>Percentage of Entries from Max Entered Contestants:</td>
-              <td>
-                ({this.state.data.count_20_entries} * 20 * 100)/
-                {this.state.data.totalEntries}
-              </td>
+              <td>{percentage}</td>
             </tr>
           </tbody>
         </table>
