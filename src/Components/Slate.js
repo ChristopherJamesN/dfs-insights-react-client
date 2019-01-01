@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BackButton from './BackButton';
+import { Link } from 'react-router-dom';
 
 class Slate extends Component {
   constructor(props) {
@@ -66,6 +67,28 @@ class Slate extends Component {
             <tr>
               <td>Percentage of Entries from Max Entered Contestants:</td>
               <td>{percentage}</td>
+            </tr>
+            <tr>
+              <td>Link to Entries:</td>
+              <td>
+                <Link
+                  key={this.props.match.params.id + 100000}
+                  to={`/slates/${this.props.match.params.id}/entries`}
+                >
+                  Entries
+                </Link>
+              </td>
+            </tr>
+            <tr>
+              <td>Link to Players:</td>
+              <td>
+                <Link
+                  key={this.props.match.params.id + 100001}
+                  to={`/slates/${this.props.match.params.id}/players`}
+                >
+                  Players
+                </Link>
+              </td>
             </tr>
           </tbody>
         </table>
