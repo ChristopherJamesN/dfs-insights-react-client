@@ -12,13 +12,7 @@ class Slates extends Component {
   }
 
   cachedFetch(url) {
-    let cacheKey = url;
-    let cached = localStorage.getItem(cacheKey);
-    if (cached != null) {
-      return cached;
-    }
     let response = fetch(url, { 'Content-Type': 'application/json' });
-    localStorage.setItem(url, response);
     return response;
   }
 
@@ -30,8 +24,6 @@ class Slates extends Component {
         return response.json();
       })
       .then(data => {
-        let cacheKey = 'http://localhost:3000/slates.json';
-        localStorage.setItem(cacheKey, data);
         let slates = data.map(hit => {
           return (
             <tr key={hit.id}>
