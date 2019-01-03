@@ -25,11 +25,13 @@ class Entries extends Component {
       })
       .then(data => {
         let slates = data.map(hit => {
+          let lineup = hit.lineup.split(' ');
+          lineup = lineup.join();
           return (
             <tr key={hit.id}>
               <td>{hit.name}</td>
               <td>{hit.points}</td>
-              <td>{hit.lineup}</td>
+              <td>{lineup}</td>
               <td>{hit.updated_at}</td>
             </tr>
           );
