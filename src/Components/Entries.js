@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BackButton from './BackButton';
 import { Table } from 'reactstrap';
+import Lineup from './Lineup';
 
 class Entries extends Component {
   constructor(props) {
@@ -28,12 +29,13 @@ class Entries extends Component {
           let lineup = hit.lineup.split(
             /(P\s)|(C\s)|(1B)|(2B)|(SS)|(3B)|(OF)|(\sG\s)|(QB)|(RB)|(WR)|(TE)|(DST)|(FLEX)|(PG)|(SG)|(SF)|(PF)|(F\s)/
           );
-          let joined_lineup = lineup.join(' -- ');
           return (
             <tr key={hit.id}>
               <td>{hit.name}</td>
               <td>{hit.points}</td>
-              <td>{joined_lineup}</td>
+              <td>
+                <Lineup Lineup={lineup} />
+              </td>
               <td>{hit.updated_at}</td>
             </tr>
           );
