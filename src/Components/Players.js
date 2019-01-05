@@ -13,31 +13,50 @@ class Players extends Component {
   }
 
   componentDidMount() {
-    fetch(
-      'http://localhost:3000/slates/' +
-        this.props.match.params.id +
-        '/players.json',
-      {
-        'Content-Type': 'application/json'
-      }
-    )
-      .then(response => {
-        return response.json();
-      })
-      .then(data => {
-        let slates = data.map(hit => {
-          return (
-            <tr key={hit.id}>
-              <td>{hit.name}</td>
-              <td>{hit.points}</td>
-              <td>{hit.ownership}</td>
-              <td>{hit.position}</td>
-            </tr>
+    const data = localStorage.getItem('players' + this.props.match.params.id);
+    if (!data) {
+      fetch(
+        'http://localhost:3000/slates/' +
+          this.props.match.params.id +
+          '/players.json',
+        {
+          'Content-Type': 'application/json'
+        }
+      )
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          let slates = data.map(hit => {
+            return (
+              <tr key={hit.id}>
+                <td>{hit.name}</td>
+                <td>{hit.points}</td>
+                <td>{hit.ownership}</td>
+                <td>{hit.position}</td>
+              </tr>
+            );
+          });
+          this.setState({ data: slates });
+          localStorage.setItem(
+            'players' + this.props.match.params.id,
+            JSON.stringify(data)
           );
-        });
-        this.setState({ data: slates });
-      })
-      .catch(error => console.error('Error:', error));
+        })
+        .catch(error => console.error('Error:', error));
+    } else {
+      let slates = JSON.parse(data).map(hit => {
+        return (
+          <tr key={hit.id}>
+            <td>{hit.name}</td>
+            <td>{hit.points}</td>
+            <td>{hit.ownership}</td>
+            <td>{hit.position}</td>
+          </tr>
+        );
+      });
+      this.setState({ data: slates });
+    }
   }
 
   render() {
