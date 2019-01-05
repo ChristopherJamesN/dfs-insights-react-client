@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BackButton from './BackButton';
+import HomeButton from './HomeButton';
 import { Table } from 'reactstrap';
 import Lineup from './Lineup';
 
@@ -48,6 +49,8 @@ class Entries extends Component {
   render() {
     return (
       <div>
+        <HomeButton />
+        <br />
         <BackButton />
         <br />
         <Table hover>

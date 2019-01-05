@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BackButton from './BackButton';
+import HomeButton from './HomeButton';
 import { Table } from 'reactstrap';
 
 class Players extends Component {
@@ -42,6 +43,8 @@ class Players extends Component {
   render() {
     return (
       <div>
+        <HomeButton />
+        <br />
         <BackButton />
         <br />
         <Table hover>

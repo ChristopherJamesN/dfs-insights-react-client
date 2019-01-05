@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BackButton from './BackButton';
+import HomeButton from './HomeButton';
 import { Link } from 'react-router-dom';
 import { Table } from 'reactstrap';
 
@@ -37,6 +38,8 @@ class Slate extends Component {
     );
     return (
       <div>
+        <HomeButton />
+        <br />
         <BackButton />
         <br />
         <Table hover>
