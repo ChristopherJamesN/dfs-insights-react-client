@@ -14,36 +14,60 @@ class Entries extends Component {
   }
 
   componentDidMount() {
-    fetch(
-      'http://localhost:3000/slates/' +
-        this.props.match.params.id +
-        '/entries.json',
-      {
-        'Content-Type': 'application/json'
-      }
-    )
-      .then(response => {
-        return response.json();
-      })
-      .then(data => {
-        let slates = data.map(hit => {
-          let lineup = hit.lineup.split(
-            /(P\s)|(C\s)|(1B)|(2B)|(SS)|(3B)|(OF)|(\sG\s)|(QB)|(RB)|(WR)|(TE)|(DST)|(FLEX)|(PG)|(SG)|(SF)|(PF)|(F\s)/
+    const data = localStorage.getItem('entries' + this.props.match.params.id);
+    if (!data) {
+      fetch(
+        'http://localhost:3000/slates/' +
+          this.props.match.params.id +
+          '/entries.json',
+        {
+          'Content-Type': 'application/json'
+        }
+      )
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          let slates = data.map(hit => {
+            let lineup = hit.lineup.split(
+              /(P\s)|(C\s)|(1B)|(2B)|(SS)|(3B)|(OF)|(\sG\s)|(QB)|(RB)|(WR)|(TE)|(DST)|(FLEX)|(PG)|(SG)|(SF)|(PF)|(F\s)/
+            );
+            return (
+              <tr key={hit.id}>
+                <td>{hit.name}</td>
+                <td>{hit.points}</td>
+                <td>
+                  <Lineup Lineup={lineup} />
+                </td>
+                <td>{hit.updated_at}</td>
+              </tr>
+            );
+          });
+          this.setState({ data: slates });
+          localStorage.setItem(
+            'entries' + this.props.match.params.id,
+            JSON.stringify(data)
           );
-          return (
-            <tr key={hit.id}>
-              <td>{hit.name}</td>
-              <td>{hit.points}</td>
-              <td>
-                <Lineup Lineup={lineup} />
-              </td>
-              <td>{hit.updated_at}</td>
-            </tr>
-          );
-        });
-        this.setState({ data: slates });
-      })
-      .catch(error => console.error('Error:', error));
+        })
+        .catch(error => console.error('Error:', error));
+    } else {
+      let slates = JSON.parse(data).map(hit => {
+        let lineup = hit.lineup.split(
+          /(P\s)|(C\s)|(1B)|(2B)|(SS)|(3B)|(OF)|(\sG\s)|(QB)|(RB)|(WR)|(TE)|(DST)|(FLEX)|(PG)|(SG)|(SF)|(PF)|(F\s)/
+        );
+        return (
+          <tr key={hit.id}>
+            <td>{hit.name}</td>
+            <td>{hit.points}</td>
+            <td>
+              <Lineup Lineup={lineup} />
+            </td>
+            <td>{hit.updated_at}</td>
+          </tr>
+        );
+      });
+      this.setState({ data: slates });
+    }
   }
 
   render() {
