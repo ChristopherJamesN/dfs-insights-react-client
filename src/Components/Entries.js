@@ -30,7 +30,7 @@ class Entries extends Component {
         .then(data => {
           let slates = data.map(hit => {
             let lineup = hit.lineup.split(
-              /(P\s)|(C\s)|(1B)|(2B)|(SS)|(3B)|(OF)|(\sG\s)|(QB)|(RB)|(WR)|(TE)|(DST)|(FLEX)|(PG)|(SG)|(SF)|(PF)|(F\s)/
+              /(P\s)|(C\s)|(1B)|(2B)|(SS)|(3B)|(OF)|(G\s)|(QB)|(RB)|(WR)|(TE)|(DST)|(FLEX)|(PG)|(SG)|(SF)|(PF)|(F\s)/
             );
             return (
               <tr key={hit.id}>
@@ -53,7 +53,7 @@ class Entries extends Component {
     } else {
       let slates = JSON.parse(data).map(hit => {
         let lineup = hit.lineup.split(
-          /(P\s)|(C\s)|(1B)|(2B)|(SS)|(3B)|(OF)|(\sG\s)|(QB)|(RB)|(WR)|(TE)|(DST)|(FLEX)|(PG)|(SG)|(SF)|(PF)|(F\s)/
+          /(P\s)|(C\s)|(1B)|(2B)|(SS)|(3B)|(OF)|(G\s)|(QB)|(RB)|(WR)|(TE)|(DST)|(FLEX)|(PG)|(SG)|(SF)|(PF)|(F\s)/
         );
         return (
           <tr key={hit.id}>
