@@ -17,7 +17,7 @@ class Entries extends Component {
     const data = localStorage.getItem('entries' + this.props.match.params.id);
     if (!data) {
       fetch(
-        'http://localhost:3000/slates/' +
+        'https://dfs-insights.herokuapp.com/slates/' +
           this.props.match.params.id +
           '/entries.json',
         {

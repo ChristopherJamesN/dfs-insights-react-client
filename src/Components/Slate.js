@@ -15,7 +15,9 @@ class Slate extends Component {
 
   componentDidMount() {
     fetch(
-      'http://localhost:3000/slates/' + this.props.match.params.id + '.json',
+      'https://dfs-insights.herokuapp.com/slates/' +
+        this.props.match.params.id +
+        '.json',
       {
         'Content-Type': 'application/json'
       }
