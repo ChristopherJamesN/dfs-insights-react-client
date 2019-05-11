@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BackButton from '../Components/BackButton';
+import Slates from '../Components/Slates';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<BackButton />, div);
+  ReactDOM.render(<Slates />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
