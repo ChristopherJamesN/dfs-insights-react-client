@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1557598126513" clover="3.2.0">
-  <project timestamp="1557598126513" name="All files">
-    <metrics statements="117" coveredstatements="12" conditionals="36" coveredconditionals="0" methods="57" coveredmethods="11" elements="210" coveredelements="23" complexity="0" loc="117" ncloc="117" packages="2" files="13" classes="13">
+<coverage generated="1557599224924" clover="3.2.0">
+  <project timestamp="1557599224924" name="All files">
+    <metrics statements="117" coveredstatements="20" conditionals="36" coveredconditionals="0" methods="57" coveredmethods="15" elements="210" coveredelements="35" complexity="0" loc="117" ncloc="117" packages="2" files="13" classes="13">
       <package name="src">
         <metrics statements="51" coveredstatements="1" conditionals="32" coveredconditionals="0" methods="16" coveredmethods="1"/>
         <file name="App.js" path="/Users/christophernady/Development/code/dfs-insights-react-client/src/App.js">
@@ -66,7 +66,7 @@
         </file>
       </package>
       <package name="src.Components">
-        <metrics statements="66" coveredstatements="11" conditionals="4" coveredconditionals="0" methods="41" coveredmethods="10"/>
+        <metrics statements="66" coveredstatements="19" conditionals="4" coveredconditionals="0" methods="41" coveredmethods="14"/>
         <file name="BackButton.jsx" path="/Users/christophernady/Development/code/dfs-insights-react-client/src/Components/BackButton.jsx">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
           <line num="6" count="1" type="stmt"/>
@@ -106,15 +106,15 @@
           <line num="6" count="1" type="stmt"/>
         </file>
         <file name="Lineup.jsx" path="/Users/christophernady/Development/code/dfs-insights-react-client/src/Components/Lineup.jsx">
-          <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-          <line num="5" count="0" type="stmt"/>
-          <line num="7" count="0" type="stmt"/>
-          <line num="13" count="0" type="stmt"/>
-          <line num="14" count="0" type="stmt"/>
-          <line num="15" count="0" type="stmt"/>
-          <line num="16" count="0" type="stmt"/>
-          <line num="18" count="0" type="stmt"/>
-          <line num="22" count="0" type="stmt"/>
+          <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="22" count="2" type="stmt"/>
         </file>
         <file name="Player.jsx" path="/Users/christophernady/Development/code/dfs-insights-react-client/src/Components/Player.jsx">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>

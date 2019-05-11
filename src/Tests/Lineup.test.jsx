@@ -6,11 +6,13 @@ import Lineup from '../Components/Lineup';
 it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(
-    props => (
-      <Router>
-        <Lineup {...props} />
-      </Router>
-    ),
+    <Router>
+      <Lineup
+        Lineup={[
+          'P Jack Flaherty P Carlos Carrasco SS José Peraza 2B Jonathan Villar OF George Springer OF Adam Jones 3B Tim Beckham 1B Chris Davis OF Craig Gentry C Victor Caratini'
+        ]}
+      />
+    </Router>,
     div
   );
   ReactDOM.unmountComponentAtNode(div);
