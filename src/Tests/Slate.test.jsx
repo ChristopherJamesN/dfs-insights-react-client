@@ -6,9 +6,11 @@ import Slate from '../Components/Slate';
 it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(
-    <Router>
-      <Slate />
-    </Router>,
+    props => (
+      <Router>
+        <Slate {...props} />
+      </Router>
+    ),
     div
   );
   ReactDOM.unmountComponentAtNode(div);

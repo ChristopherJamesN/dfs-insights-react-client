@@ -6,9 +6,11 @@ import Lineup from '../Components/Lineup';
 it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(
-    <Router>
-      <Lineup />
-    </Router>,
+    props => (
+      <Router>
+        <Lineup {...props} />
+      </Router>
+    ),
     div
   );
   ReactDOM.unmountComponentAtNode(div);

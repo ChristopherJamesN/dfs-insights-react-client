@@ -6,9 +6,11 @@ import Entries from '../Components/Entries';
 it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(
-    <Router>
-      <Entries />
-    </Router>,
+    props => (
+      <Router>
+        <Entries {...props} />
+      </Router>
+    ),
     div
   );
   ReactDOM.unmountComponentAtNode(div);
