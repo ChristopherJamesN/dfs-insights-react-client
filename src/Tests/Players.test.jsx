@@ -6,11 +6,15 @@ import Players from '../Components/Players';
 it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(
-    props => (
-      <Router>
-        <Players {...props} />
-      </Router>
-    ),
+    <Router>
+      <Players
+        match={{
+          params: {
+            id: 1
+          }
+        }}
+      />
+    </Router>,
     div
   );
   ReactDOM.unmountComponentAtNode(div);
