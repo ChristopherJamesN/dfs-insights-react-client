@@ -6,12 +6,17 @@ import Slate from '../Components/Slate';
 it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(
-    props => (
-      <Router>
-        <Slate {...props} />
-      </Router>
-    ),
+    <Router>
+      <Slate
+        match={{
+          params: {
+            id: 1
+          }
+        }}
+      />
+    </Router>,
     div
   );
+  expect();
   ReactDOM.unmountComponentAtNode(div);
 });
