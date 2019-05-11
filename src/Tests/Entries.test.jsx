@@ -6,11 +6,15 @@ import Entries from '../Components/Entries';
 it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(
-    props => (
-      <Router>
-        <Entries {...props} />
-      </Router>
-    ),
+    <Router>
+      <Entries
+        match={{
+          params: {
+            id: 1
+          }
+        }}
+      />
+    </Router>,
     div
   );
   ReactDOM.unmountComponentAtNode(div);
