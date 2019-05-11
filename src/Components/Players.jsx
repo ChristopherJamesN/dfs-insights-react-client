@@ -61,7 +61,7 @@ class Players extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <HomeButton />
         <br />
         <BackButton />
@@ -77,7 +77,7 @@ class Players extends Component {
           </thead>
           <tbody>{this.state.data}</tbody>
         </Table>
-      </div>
+      </>
     );
   }
 }

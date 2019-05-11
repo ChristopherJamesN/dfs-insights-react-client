@@ -39,7 +39,7 @@ class Slate extends Component {
       ).toPrecision(4)
     );
     return (
-      <div>
+      <>
         <HomeButton />
         <br />
         <BackButton />
@@ -98,7 +98,7 @@ class Slate extends Component {
             </tr>
           </tbody>
         </Table>
-      </div>
+      </>
     );
   }
 }

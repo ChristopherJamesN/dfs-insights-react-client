@@ -19,7 +19,7 @@ class Lineup extends Component {
   }
 
   render() {
-    return <div>{this.state.data}</div>;
+    return <>{this.state.data}</>;
   }
 }
 

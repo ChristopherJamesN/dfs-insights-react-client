@@ -4,7 +4,7 @@ import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 class IntroText extends Component {
   render() {
     return (
-      <div>
+      <>
         <Breadcrumb>
           <BreadcrumbItem>
             <h2>Welcome to DFSInsights</h2>
@@ -20,7 +20,7 @@ class IntroText extends Component {
             <p>All Slates</p>
           </BreadcrumbItem>
         </Breadcrumb>
-      </div>
+      </>
     );
   }
 }
