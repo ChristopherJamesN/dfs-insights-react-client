@@ -14,10 +14,12 @@ class Players extends Component {
 
   componentDidMount() {
     const data = localStorage.getItem('players' + this.props.match.params.id);
-    const serverUrl = 'https://dfs-insights.herokuapp.com';
     if (!data) {
       fetch(
-        serverUrl + '/slates/' + this.props.match.params.id + '/players.json',
+        process.env.REACT_APP_SERVER_URL +
+          '/slates/' +
+          this.props.match.params.id +
+          '/players.json',
         {
           'Content-Type': 'application/json'
         }

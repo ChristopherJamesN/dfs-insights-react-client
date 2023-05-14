@@ -15,10 +15,12 @@ class Entries extends Component {
 
   componentDidMount() {
     const data = localStorage.getItem('entries' + this.props.match.params.id);
-    const serverUrl = 'https://dfs-insights.herokuapp.com';
     if (!data) {
       fetch(
-        serverUrl + '/slates/' + this.props.match.params.id + '/entries.json',
+        process.env.REACT_APP_SERVER_URL +
+          '/slates/' +
+          this.props.match.params.id +
+          '/entries.json',
         {
           'Content-Type': 'application/json'
         }

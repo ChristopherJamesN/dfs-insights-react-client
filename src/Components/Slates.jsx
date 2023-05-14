@@ -17,8 +17,7 @@ class Slates extends Component {
   }
 
   componentDidMount() {
-    const serverUrl = 'https://dfs-insights.herokuapp.com';
-    fetch(serverUrl + '/slates.json', {
+    fetch(process.env.REACT_APP_SERVER_URL + '/slates.json', {
       'Content-Type': 'application/json'
     })
       .then(response => {
